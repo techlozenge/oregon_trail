@@ -4,7 +4,7 @@
 
     // **************[ TRAVELER ]************** //
     // A traveler has a few properties: an amount of food (number), a name (string), and an isHealthy (boolean).
-    function Traveler(name){
+    function Traveler(name) {
         // private internals...
         var name = name;
         var food = 0;
@@ -47,7 +47,7 @@
         // setters...
         this.setPassenger = function(newPassenger) {
             console.log("    setPassenger: passengers=" + passengers.length + " capacity=" + capacity);
-            if (passengers.length <= capacity) {
+            if (passengers.length < capacity) {
                 passengers.push(newPassenger);   // welcome aboard, traveler!
                 console.log("    setPassenger: passengers=" + passengers.length);
             } else {
@@ -80,7 +80,7 @@
     // 50% chance to increase the traveler's food by 100 (successful hunt), and
     // 50% to increase it by 0 (unsuccessful hunt).
     function hunt(traveler) {
-        if (Math.round(Math.random()) == 1) {
+        if (Math.round(Math.random()) {
             traveler.setFood(traveler.getFood() + 100);
         }
     }
@@ -147,6 +147,8 @@
 
     // Create a traveler with the name 'Henrietta' called 'traveler'
     let traveler = makeTraveler('Henrietta');
+    console.log(traveler.getName());
+
     console.log("There is a new Traveler named " + traveler.getName());
     console.log(traveler.getName() + " has food of " + traveler.getFood() + " and health is " + traveler.getHealth());
     console.log(" ");
